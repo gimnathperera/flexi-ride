@@ -62,7 +62,7 @@ const CarDetailsModal = ({ setIsOpen, data }: CarDetailsModalProps) => {
                 </div>
               ) : (
                 <div className="h-56 w-full rounded-lg sm:w-4/5 md:h-[330px] md:w-full">
-                  <div className="relative m-auto h-52 w-52 sm:h-[200px] sm:w-[250px] md:h-[300px] md:w-[80%]">
+                  <div className="relative m-auto h-52 w-52 sm:h-[200px] sm:w-[250px] md:h-[300px] md:w-4/5">
                     <Image
                       src={images[activeImage]}
                       alt="car"
@@ -128,7 +128,7 @@ const CarDetailsModal = ({ setIsOpen, data }: CarDetailsModalProps) => {
                     )}
                   </div>
                   <Cross
-                    className="hidden h-[24px] w-[24px] cursor-pointer md:inline"
+                    className="absolute right-2 top-2 z-20 h-[24px] w-[24px] cursor-pointer rounded bg-white dark:bg-primary-gray-850"
                     onClick={() => setIsOpen(false)}
                   />
                 </div>

@@ -149,7 +149,7 @@ const PopularCarCard = ({
             >
               <Image
                 src="iconography/heart.svg"
-                alt="unliked heart"
+                alt="unlike-heart"
                 fill
                 className="cursor-pointer"
               />
