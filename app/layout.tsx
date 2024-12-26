@@ -10,8 +10,8 @@ import Footer from "@/components/Footer";
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Morent - Rent cars from people nearby",
-  description: "Morent is a social media platform for renting cars.",
+  title: "FlexiRide - Rent cars from people nearby",
+  description: "FlexiRide is a social media platform for renting cars.",
 };
 
 export default function RootLayout({

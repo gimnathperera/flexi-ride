@@ -28,7 +28,7 @@ const Footer = () => {
         <div className="flex flex-col items-start">
           <Link href="/">
             <h1 className="cursor-pointer text-2xl font-bold uppercase text-primary-blue-500 md:text-[32px]">
-              Morent
+              FlexiRide
             </h1>
           </Link>
           <p className="mt-3 max-w-[216px] text-start text-xs font-medium leading-8 text-primary-gray-400 dark:text-white md:mt-6 md:max-w-[292px] md:text-base">

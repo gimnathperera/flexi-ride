@@ -171,7 +171,7 @@ function Form() {
                       "dropzone flex flex-col items-center justify-center gap-2 cursor-pointer",
                   })}
                 >
-                  <input type="file" {...getInputProps()} {...field} />
+                  <input type="file" {...getInputProps()} />
                   <Image
                     src="/iconography/image-upload.svg"
                     alt="upload"

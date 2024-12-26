@@ -1,19 +1,19 @@
 "use client";
 
 import { Button, SearchFilter } from "@/components";
-import { CarCardProps, Checked } from "@/types";
-import { useState, ChangeEvent, useEffect, FormEvent } from "react";
-import SearchFilterModal from "@/components/SearchFilterModal";
-import { searchFilters } from "@/constants";
-import Image from "next/image";
-import PickDropCard from "@/components/PickDropCard";
 import CarCard from "@/components/CarCard";
+import PickDropCard from "@/components/PickDropCard";
+import SearchFilterModal from "@/components/SearchFilterModal";
+import SearchSkeleton from "@/components/SearchSkeleton";
+import { searchFilters } from "@/constants";
 import {
   carSearch,
   fetchAllCars,
   totalCarCount,
 } from "@/lib/actions/car.actions";
-import Loader from "@/components/Loader";
+import { CarCardProps, Checked } from "@/types";
+import Image from "next/image";
+import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 
 export default function Search() {
   // controls if the modal is open or not
@@ -255,9 +255,7 @@ export default function Search() {
 
         {/* Car Card Section */}
         {isLoading ? (
-          <div className="mt-5 flex h-screen items-start justify-center md:mt-20">
-            <Loader />
-          </div>
+          <SearchSkeleton />
         ) : (
           <>
             {cars.length > 0 ? (

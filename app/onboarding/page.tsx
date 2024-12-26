@@ -27,7 +27,7 @@ async function Page() {
       <section className="flex w-full flex-col rounded-lg bg-white px-4 py-6 dark:bg-primary-gray-850 lg:w-4/5 xl:w-3/5">
         <div className="inline-flex flex-col justify-start gap-2">
           <h1 className="text-base font-bold text-primary-gray-900 dark:text-white md:text-xl">
-            Complete your profile now to use Morent
+            Complete your profile now to use FlexiRide
           </h1>
         </div>
         <OnboardingForm user={userData} />

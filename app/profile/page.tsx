@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Image from "next/image";
 import Button from "@/components/Button";
 import CarCard from "@/components/CarCard";
-import { ProfileCarsProps, ProfileUserData, ProfileUserProps } from "@/types";
+import ProfileSkeleton from "@/components/ProfileSkeleton";
 import { profileUserCar } from "@/lib/actions/user.actions";
+import { ProfileCarsProps, ProfileUserData, ProfileUserProps } from "@/types";
+import Image from "next/image";
 import Link from "next/link";
-import Loader from "@/components/Loader";
+import { useEffect, useState } from "react";
 
 export default function Profile() {
   const [user, setUser] = useState<ProfileUserProps>();
@@ -34,11 +34,7 @@ export default function Profile() {
   }, []);
 
   if (isLoading) {
-    return (
-      <div className="mt-28 flex h-screen items-start justify-center">
-        <Loader />
-      </div>
-    );
+    return <ProfileSkeleton />;
   }
 
   return (
@@ -51,7 +47,7 @@ export default function Profile() {
 
         <article className="mt-5 flex h-[301px] flex-col rounded-lg bg-white dark:bg-primary-gray-850 md:h-[240px]">
           {/* Provides the image background  */}
-          <section className="relative h-[60%] w-full">
+          <section className="relative h-3/5 w-full">
             {user?.coverImage && (
               <Image
                 src={user.coverImage}

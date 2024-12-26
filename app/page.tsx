@@ -7,7 +7,7 @@ import {
   Button,
   PopularCarCard,
 } from "@/components";
-import Loader from "@/components/Loader";
+import CarLoader from "@/components/CarLoader";
 import {
   carSearch,
   fetchAllCars,
@@ -116,22 +116,19 @@ export default function Home() {
         />
       </div>
 
-      <PickDropCard
-        location={location}
-        setLocation={setLocation}
-        availabilityFrom={availabilityFrom}
-        setAvailabilityFrom={setAvailabilityFrom}
-        availabilityTo={availabilityTo}
-        setAvailabilityTo={setAvailabilityTo}
-        handleSubmit={handleSubmit}
-      />
-
       {isLoading ? (
-        <div className="mt-5 flex h-screen items-start justify-center md:mt-28">
-          <Loader />
-        </div>
+        <CarLoader />
       ) : (
         <>
+          <PickDropCard
+            location={location}
+            setLocation={setLocation}
+            availabilityFrom={availabilityFrom}
+            setAvailabilityFrom={setAvailabilityFrom}
+            availabilityTo={availabilityTo}
+            setAvailabilityTo={setAvailabilityTo}
+            handleSubmit={handleSubmit}
+          />
           {!hidePopularCars && (
             <section className="relative mt-6 flex w-full flex-col">
               <h2 className="mb-8 text-sm font-semibold text-primary-gray-400">
