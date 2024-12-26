@@ -129,7 +129,7 @@ const CarCard = ({
     <>
       <article
         id="parent"
-        className="flex max-h-60 w-full min-w-[290px] max-w-[360px] flex-1 flex-col rounded-lg bg-white p-4 dark:bg-primary-gray-850 sm:h-96 sm:min-h-[360px]"
+        className="flex max-h-60 w-full min-w-[290px] max-w-[360px] flex-1 flex-col rounded-lg bg-white p-4 transition-transform duration-300 hover:scale-105 hover:shadow-lg dark:bg-primary-gray-850 dark:hover:bg-primary-gray-800 sm:h-96 sm:min-h-[360px]"
       >
         <div className="flex flex-row items-center justify-between">
           <h2 className="truncate text-base font-semibold text-primary-gray-900 dark:text-white sm:text-xl sm:font-bold">
