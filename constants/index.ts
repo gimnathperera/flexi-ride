@@ -1,15 +1,15 @@
 export const footerLinks = [
   {
     title: "About",
-    links: ["How it works", "Featured", "Partnership", "Business Relation"],
+    links: ["How it works", "Featured"],
   },
   {
     title: "Community",
-    links: ["Events", "Blog", "Podcast", "Invite a friend"],
+    links: ["Events", "Blog"],
   },
   {
     title: "Social",
-    links: ["Discord", "Instagram", "Twitter", "Facebook"],
+    links: ["Discord", "Instagram"],
   },
 ];
 

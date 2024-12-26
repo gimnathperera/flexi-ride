@@ -150,26 +150,24 @@ export default function Home() {
               <h2 className="mb-8 text-sm font-semibold text-primary-gray-400">
                 Popular Cars
               </h2>
-              <div className="relative">
-                <div className="relative flex w-full items-center gap-4 overflow-x-auto md:flex-row md:justify-between md:overflow-x-scroll xl:overflow-x-hidden xl:to-0%">
-                  {popularCars.map((car) => (
-                    <PopularCarCard
-                      key={car._id}
-                      id={car._id}
-                      title={car.title}
-                      type={car.type}
-                      images={car.images}
-                      fuel={car.fuel}
-                      transmission={car.transmission}
-                      people={car.people}
-                      price={car.price}
-                      priceBeforeDiscount={car.priceBeforeDiscount}
-                      description={car.description}
-                      isRented={car.isRented}
-                    />
-                  ))}
-                </div>
-                <div className="absolute inset-y-0 right-0 shadow-customShadow dark:shadow-customShadowDark xl:hidden"></div>
+
+              <div className="grid w-full grid-cols-1 items-center justify-center gap-5 smd:grid-cols-2 mdl:grid-cols-3 xl:grid-cols-4">
+                {popularCars.map((car) => (
+                  <PopularCarCard
+                    key={car._id}
+                    id={car._id}
+                    title={car.title}
+                    type={car.type}
+                    images={car.images}
+                    fuel={car.fuel}
+                    transmission={car.transmission}
+                    people={car.people}
+                    price={car.price}
+                    priceBeforeDiscount={car.priceBeforeDiscount}
+                    description={car.description}
+                    isRented={car.isRented}
+                  />
+                ))}
               </div>
             </section>
           )}
